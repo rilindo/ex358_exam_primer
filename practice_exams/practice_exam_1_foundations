@@ -10,10 +10,10 @@ Required Pre-Tasks
 0.  Configure ansible as follows
 
   - ansible should already be installed.
-  - `ansible` user should be created on `node01` and `cn01`
+  - `ansible` user should be created on all nodes
   - directory `exam` should be created under `ansible` home directory on `cn01`
   - `ansible` user should able to become root via sudo on `node01` and `cn01 without being prompted for the password.
-  - `ansible` user should able to login into `node01` without being prompted for the password.
+  - `ansible` user should able to login into all nodes without being prompted for the password.
 
 From this point, every playbook and role should be created under `/home/ansible/exam` on `cn01`.
 
