@@ -1,6 +1,6 @@
 # Nodes
 
-- cn01 - A single control node
+- ctrl01 - A single control node
 - ha01
 - cache01
 - node01
