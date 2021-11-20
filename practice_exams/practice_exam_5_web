@@ -2,8 +2,9 @@
 
 - ctrl01 - A single control node
 - ha01
+- ha02
 - cache01
-- node01
+- node02
 - web01
 - web02
 - web03
@@ -15,11 +16,18 @@ Required Pre-Tasks
 
   - ansible should already be installed.
   - `ansible` user should be created on all nodes
-  - directory `exam` should be created under `ansible` home directory on `cn01`
-  - `ansible` user should able to become root via sudo on `node01` and `cn01 without being prompted for the password.
+  - directory `exam` should be created under `ansible` home directory on `ctrl01`
+  - `ansible` user should able to become root via sudo on `node01` and `ctrl01 without being prompted for the password.
   - `ansible` user should able to login into all nodes without being prompted for the password.
 
-From this point, every playbook and role should be created under `/home/ansible/exam` on `cn01`.
+From this point, every playbook and role should be created under `/home/ansible/exam` on `ctrl01`.
+
+1. Create or update inventory file `/home/ansible/exam/inventory.yml` (it should be yaml format) on `ctrl01` and configure `ansible.cfg` to use that inventory. The inventory should contain:
+
+- `web01`, `web02`, `web03`,  and `web03` should be on group `web`
+- `node02` should be on group `clients`
+- `cache01`, `ha01`, and `ha02` should in group `traffic`
+- `ctrl01` should be on group infra (optional)
 
 1. On `web01` and `web03`
 
