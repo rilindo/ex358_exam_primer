@@ -16,7 +16,7 @@ Required Pre-Tasks
   - ansible should already be installed.
   - `ansible` user should be created on all nodes
   - directory `exam` should be created under `ansible` home directory on `ctrl01`
-  - `ansible` user should able to become root via sudo on `node01` and `ctrl01 without being prompted for the password.
+  - `ansible` user should able to become root via sudo on `node01` and `ctrl01` without being prompted for the password.
   - `ansible` user should able to login into all nodes without being prompted for the password.
 
 From this point, every playbook and role should be created under `/home/ansible/exam` on `ctrl01`.
@@ -24,7 +24,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 1. Create or update inventory file `/home/ansible/exam/inventory.yml` (it should be yaml format) on `ctrl01` and configure `ansible.cfg` to use that inventory. The inventory should contain:
 
 - group `network` for `net01` and `net02`, and `dhcp01`
-- group `routing` with `ns01`, `ns02`
+- group `dns` with `ns01`, `ns02`
 - `ctrl01` should be on group infra (optional)
 
 
