@@ -12,7 +12,7 @@ Required Pre-Tasks
   - ansible should already be installed.
   - `ansible` user should be created on all nodes
   - directory `exam` should be created under `ansible` home directory on `ctrl01`
-  - `ansible` user should able to become root via sudo on `node01` and `ctrl01 without being prompted for the password.
+  - `ansible` user should able to become root via sudo on `node01` and `ctrl01` without being prompted for the password.
   - `ansible` user should able to login into all nodes without being prompted for the password.
 
 From this point, every playbook and role should be created under `/home/ansible/exam` on `ctrl01`.
@@ -40,6 +40,6 @@ Exam tasks
 
 - Install apache and have it start up automatically.
 - Create directory `/www`
-- Configure a virtual site to list on port *8888* with the document root pointing to `/www`
+- Configure a virtual site called `people.example.com` to listen on port *8888* with the document root pointing to `/www`
 - Create an index page call "Hello, People!" in `/www`
-- Allow inbound access on port *8888* from `ctrl01` *only*.
+- Allow inbound access on port *8888* from the ip of `ctrl01` *only*.
