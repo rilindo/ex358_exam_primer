@@ -36,7 +36,7 @@ Exam tasks
  - Allow inbound traffic on port *601* from group `nodes`
  - Configures instances in group `nodes` to send rsyslogs to `node03`
 
-6. Write a playbook `apache-setup.yml` to apply the follow for all instances in group `nodes`:
+6. Write a playbook `apache-setup.yml` to apply the follow for `node01`
 
 - Install apache and have it start up automatically.
 - Create directory `/www`
