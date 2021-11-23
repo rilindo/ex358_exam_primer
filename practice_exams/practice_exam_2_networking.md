@@ -1,7 +1,7 @@
 # Nodes
 
 - ctrl01 - A single control node
-- dhcp01
+- dhcpd01
 - net01
 - net02
 - ns01
@@ -19,26 +19,23 @@ Required Pre-Tasks
   - `ansible` user should able to become root via sudo on `node01` and `ctrl01` without being prompted for the password.
   - `ansible` user should able to login into all nodes without being prompted for the password.
 
-From this point, every playbook and role should be created under `/home/ansible/exam` on `ctrl01`.
+From this point, every playbook and role should be created under `/home/ansible/exam` on `ctrl01`. Note that we will be using `10.0.0.0/24` for ip4 and `2001:DB8::/32` for ipv6
 
 1. Create or update inventory file `/home/ansible/exam/inventory.yml` (it should be yaml format) on `ctrl01` and configure `ansible.cfg` to use that inventory. The inventory should contain:
 
-- group `network` for `net01` and `net02`, and `dhcp01`
+- group `network` for `net01` and `net02`, and `dhcpd01`
 - group `dns` with `ns01`, `ns02`
 - `ctrl01` should be on group infra (optional)
 
+2. Create a playbook called `static-assignment.yml` to:
 
-2. Create a playbook called `configure-dhcp01.yml` to:
+- configure a static ipv4 and ipv6 address for `dhcpd01`. The last ip should end in .5  both ipv4 and ipv6 addresses
+
+3. Create a playbook called `configure-dhcp01.yml` to run against `dhcpd01`:
 
 - Install dhcpd and radvd for ipv4 and ipv6 address assigned, and enabled on start up.
-- Set static ipv4 and ipv6 address for `ns01`
+- Set static ipv4 and ipv6 address for `ns01` and `ns02`
 - Configure firewall to allow dhcp assignments
-
-Use `192.168.2.0/24` for ip4 and `2001:DB8::/32` for ipv6
-
-3. Create a playbook called `static-assignment.yml` to:
-
-- configure a static ipv4 and ipv6 address for `net02`. The last ip should end in .2  both ipv4 and ipv6 addresses
 
 4. Create a playbook called `network-team.yml` to configure a network team on `net01`. The IP should end in .1 for both ipv4 and ipv6 addresses.
 
