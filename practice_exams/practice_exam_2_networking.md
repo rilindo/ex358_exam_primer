@@ -29,7 +29,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 2. Create a playbook called `static-assignment.yml` to:
 
-- configure a static ipv4 and ipv6 address for `dhcpd01`. The last ip should end in .5  both ipv4 and ipv6 addresses
+- configure a static ipv4 and ipv6 address for `dhcpd01`. The last ip should end in .10 for both ipv4 and ipv6 addresses
 
 3. Create a playbook called `configure-dhcp01.yml` to run against `dhcpd01`:
 
