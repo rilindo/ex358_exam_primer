@@ -47,6 +47,6 @@ From this point, every playbook and role should be created under `/home/ansible/
 6. Create a playbook called `dns-authoriative.yml` on `ns02` to:
 
 - Configure an forward DNS zone for `example.com`.
-- A reverse dns zone for the 192.168.2.0 network.
+- A reverse dns zone for the `10.0.0.0/24` network.
 - All nodes except for `ctrl01` should have forward and reverse dns entries.
 - Allow queries from anywhere on the network.
