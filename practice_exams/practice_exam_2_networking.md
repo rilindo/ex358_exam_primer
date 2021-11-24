@@ -37,7 +37,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Set static ipv4 and ipv6 address for `ns01` and `ns02`
 - Configure firewall to allow dhcp assignments
 
-4. Create a playbook called `network-team.yml` to configure a network team on `net01`. The IP should end in .1 for both ipv4 and ipv6 addresses.
+4. Create a playbook called `network-team.yml` to configure a network team on `net01` and `net02`. The IP should end in `.1`  for both ipv4 and ipv6 addresses on `net01` and `.02` for both ipv4 and ipv6 addresses on `net02`
 
 5. Create a playbook called `dns-caching.yml` on `ns02` to:
 
