@@ -44,7 +44,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Configure dns caching.
 - Allow queries from anywhere on the network.
 
-6. Create a playbook called `dns-authoriative.yml` on `ns01` to:
+6. Create a playbook called `dns-authoritative.yml` on `ns01` to:
 
 - Configure an forward DNS zone for `example.com`.
 - A reverse dns zone for the `10.0.0.0/24` network.
