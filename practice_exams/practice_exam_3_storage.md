@@ -33,7 +33,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 3. On `node04`:
 
-- Mount `/export` on `nfs01` on `/mnt/nfs`
+- Mount `/shared_nfs` on `nfs01` on `/mnt/nfs`
 
 4. On `san01`:
 
