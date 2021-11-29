@@ -49,7 +49,8 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 6. Create a playbook called `smb-server.yml` to configure the following on `smb01`:
 
-- Create local and samba users `jiro`, `han`, `mary`, and `chen` in a group `knights`, with the password of `Avat@r_knights`
+- Create local and samba users `jiro`, `han`, `maria`, and `chen` in a group `knights`, with the password of `Avat@r_knights`
+- `Avat@r_knights` should be encrypted in the file `smb_users.yml`. The vault password should be `bend`
 - Create directory `earth` and create a file `bend.txt` with the words `avatar knights`.
 - Create samba share called `earth` and allow access to the above users and allow access from `node04`
 
