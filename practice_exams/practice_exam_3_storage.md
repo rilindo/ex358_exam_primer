@@ -38,7 +38,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 - Setup iscsi service and have start from boot.
 - Create a `100` MiG target.
-- Allow access to service from `node04`.
+- Allow access to service from the lab's network (example, if your network is `192.168.3.0/24`, allow access from that CIDR)
 
 5. Create a playbook called `iscsi-client.yml` to configure the following on `node04`:
 
