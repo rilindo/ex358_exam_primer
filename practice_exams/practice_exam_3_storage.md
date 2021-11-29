@@ -45,7 +45,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Configure iscsi client against `san01`
 - Create a volume group `iscsi_vg` using the entire iscsi disk that is created.
 - Create a volume group `iscsi_lv` using the entire volume group `iscsi_vg`.
-- Format the file system on `iscsi_lv` with nfs and mount it on `/mnt/iscsi`.
+- Format the file system on `iscsi_lv` with `xfs` and mount it on `/mnt/iscsi` on boot.
 
 6. Create a playbook called `smb-server.yml` to configure the following on `smb01`:
 
