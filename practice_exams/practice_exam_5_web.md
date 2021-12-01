@@ -29,31 +29,36 @@ From this point, every playbook and role should be created under `/home/ansible/
 - `cache01`, `ha01`, and `ha02` should in group `traffic`
 - `ctrl01` should be on group infra (optional)
 
-1. On `web01` and `web03`
+1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web03` to:
 
 - Install Apache and start it up on boot
 - Configure a name-based virtualhost called "earth.example.com" with the document root of `/earth`
 - earth.example.com should be configured on port `8888`
 - The `/earth` directory should have an index called with the hostname of the server.
 
-2. On `web03` and `web04`
+2. Create playbook `nginx.yml` to configure `web03` and `web04` to:
 
-- nginx should be installed and start on boot
-- the default index page should contain the hostname of the server.
+- Have nginx be installed and start on boot
+- Configure default index page to have tain the hostname of the server.
 
-3. On `cache01`:
+3. Create playbook `squid.yml` to against `cache01`:
 
 - squid be installed and start on boot
 - configure to listen on port 8080
 - firewall should be figure to allow access to that port.
 
-4. On `node01`
+4. Create playbook `elinks.yml` to do the following on  `node01`:
 
 - Install `elinks`
 - configure elinks environment so that it can browse using `cache01` as the proxy server.
 
-5. On `ha01`
+5. Create playbook `ha.yml` to do the following on `ha01`:
 
 - Install and configure haproxy to start up on boot
 - Configure haproxy to route traffic to `web03` and `web04` ip addresses
+
+5. Create playbook `ha-ssl.yml` to do the following on `ha02`:
+
+- Install and configure haproxy to start up on boot
+- Configure haproxy to route traffic to `web01` and `web02` ip addresses
 - Configure SSL termination with haproxy.
