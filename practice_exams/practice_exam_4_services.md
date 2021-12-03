@@ -35,7 +35,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 4. On `mail02`:
 
-- Configure mail relay to forward email to mail02
+- Configure mail relay to forward email to `mail01`
 
 5. On `db01`:
 
