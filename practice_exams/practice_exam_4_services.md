@@ -23,24 +23,24 @@ From this point, every playbook and role should be created under `/home/ansible/
 - `db01`, `prnt01`, `mail01`,  and `mail02` should be on group `services`
 - `ctrl01` should be on group infra (optional)
 
-2. create playbook `printer-queue.yml` on `prnt01` to :
+2. create playbook `printer-queue.yml` to do the following on `prnt01`:
 
  - Install cups and have it start on boot.
  - Allow access to cups UI from the local network as well as `prnt01`'s ip.
  - configure encryption for CUPS UI.
  - Add generic text-only printer
 
-3. Create playbook `mail.yml` in `mail01` to:
+3. Create playbook `mail.yml` to do the following on `mail01`:
 
 - Configure dovecat client with imap`
 - Configure postfix to allow inbound access from within the same network
 - Allow inbound access to postfix
 
-4. Create playbook `relay.yml` on `mail02` to:
+4. Create playbook `relay.yml` to do the following on `mail02`:
 
 - Configure mail relay to forward email to mail02
 
-5. Create playbook `maria.yml` on `db01` to:
+5. Create playbook `maria.yml` to do the following on `db01`:
 
 - Install and startup on boot mariadb
 - Create database `mydb`
@@ -48,6 +48,6 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Create table in `mydb` called `mytable` with `first_name` and `last_name` as the columns, with the third column being autocrement id.
 - Add 3 test records with random names.
 
-6. Create playbook `mariadb` on `db01` to:
+6. Create playbook `mariadb-backup.yml` to do the following on `db01`:
 
 - Backup `mydb` to file `/opt/mydb.sql`
