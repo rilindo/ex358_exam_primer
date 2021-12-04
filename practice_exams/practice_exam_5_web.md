@@ -32,19 +32,19 @@ From this point, every playbook and role should be created under `/home/ansible/
 1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web03` to:
 
 - Install Apache and start it up on boot
-- Configure a name-based virtualhost called "earth.example.com" with the document root of `/earth`
+- Configure a name-based virtualhost called `earth.example.com` with the document root of `/earth`
 - earth.example.com should be configured on port `8888`
 - The `/earth` directory should have an index called with the hostname of the server.
 
 2. Create playbook `nginx.yml` to configure `web03` and `web04` to:
 
 - Have nginx be installed and start on boot
-- Configure default index page to have tain the hostname of the server.
+- Configure default index page to have the the hostname of the server.
 
 3. Create playbook `squid.yml` to against `cache01`:
 
 - squid be installed and start on boot
-- configure to listen on port 8080
+- configure to listen on port `8080`
 - firewall should be figure to allow access to that port.
 
 4. Create playbook `elinks.yml` to do the following on  `node01`:
@@ -57,7 +57,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Install and configure haproxy to start up on boot
 - Configure haproxy to route traffic to `web03` and `web04` ip addresses
 
-5. Create playbook `ha-ssl.yml` to do the following on `ha02`:
+6. Create playbook `ha-ssl.yml` to do the following on `ha02`:
 
 - Install and configure haproxy to start up on boot
 - Configure haproxy to route traffic to `web01` and `web02` ip addresses
