@@ -44,10 +44,12 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 - Install and startup on boot mariadb
 - Create database `mydb`
-- Create users `mydbadm` to allow access to just `mydb`
-- Create table in `mydb` called `mytable` with `first_name` and `last_name` as the columns, with the third column being autocrement id.
+- Create users `mydbadm` to allow access to just `mydb` with the password of `bending`
 
-Afterwards, add at least three test records manually with random names.
+After this, create the following manually:
+
+- Create table in `mydb` called `mytable` with `first_name` and `last_name` as varchar columns (60 and 120, respectively), with the third column being autoincrement interget `id`.
+- Add at least three test records manually with random names.
 
 6. Create playbook `mariadb-backup.yml` to do the following on `db01`:
 
