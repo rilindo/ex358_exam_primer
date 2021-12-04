@@ -38,7 +38,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 4. Create playbook `relay.yml` to do the following on `mail02`:
 
-- Configure mail relay to forward email to mail02
+- Configure mail relay to forward email to `mail01`
 
 5. Create playbook `maria.yml` to do the following on `db01`:
 
@@ -46,7 +46,8 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Create database `mydb`
 - Create users `mydbadm` to allow access to just `mydb`
 - Create table in `mydb` called `mytable` with `first_name` and `last_name` as the columns, with the third column being autocrement id.
-- Add 3 test records with random names.
+
+Afterwards, add at least three test records manually with random names.
 
 6. Create playbook `mariadb-backup.yml` to do the following on `db01`:
 
