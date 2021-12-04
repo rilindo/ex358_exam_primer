@@ -45,7 +45,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 
 - squid be installed and start on boot
 - configure to listen on port `8080`
-- firewall should be figure to allow access to that port.
+- firewall should be configured to allow access to that port.
 
 4. Create playbook `elinks.yml` to do the following on  `node01`:
 
