@@ -47,10 +47,10 @@ From this point, every playbook and role should be created under `/home/ansible/
 - configure to listen on port `8080`
 - firewall should be configured to allow access to that port.
 
-4. Create playbook `elinks.yml` to do the following on  `node01`:
+4. Create playbook `links.yml` to do the following on `node02`:
 
-- Install `elinks`
-- configure elinks environment so that it can browse using `cache01` as the proxy server.
+- Install links
+- configure links environment so that it can browse using `cache01` as the proxy server.
 
 5. Create playbook `ha.yml` to do the following on `ha01`:
 
