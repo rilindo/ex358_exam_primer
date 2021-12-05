@@ -29,7 +29,7 @@ From this point, every playbook and role should be created under `/home/ansible/
 - `cache01`, `ha01`, and `ha02` should in group `traffic`
 - `ctrl01` should be on group infra (optional)
 
-1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web03` to:
+1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web02` to:
 
 - Install Apache and start it up on boot
 - Configure a name-based virtualhost called `earth.example.com` with the document root of `/earth`
