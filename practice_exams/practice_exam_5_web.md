@@ -29,28 +29,28 @@ From this point, every playbook and role should be created under `/home/ansible/
 - `cache01`, `ha01`, and `ha02` should in group `traffic`
 - `ctrl01` should be on group infra (optional)
 
-1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web03` to:
+1. Create playbook `apache2-alt-port.yml` to run again `web01` and `web02` to:
 
 - Install Apache and start it up on boot
-- Configure a name-based virtualhost called "earth.example.com" with the document root of `/earth`
+- Configure a name-based virtualhost called `earth.example.com` with the document root of `/earth`
 - earth.example.com should be configured on port `8888`
 - The `/earth` directory should have an index called with the hostname of the server.
 
 2. Create playbook `nginx.yml` to configure `web03` and `web04` to:
 
 - Have nginx be installed and start on boot
-- Configure default index page to have tain the hostname of the server.
+- Configure default index page to have the the hostname of the server.
 
 3. Create playbook `squid.yml` to against `cache01`:
 
 - squid be installed and start on boot
-- configure to listen on port 8080
-- firewall should be figure to allow access to that port.
+- configure to listen on port `8080`
+- firewall should be configured to allow access to that port.
 
-4. Create playbook `elinks.yml` to do the following on  `node01`:
+4. Create playbook `links.yml` to do the following on `node02`:
 
-- Install `elinks`
-- configure elinks environment so that it can browse using `cache01` as the proxy server.
+- Install links
+- configure links environment so that it can browse using `cache01` as the proxy server.
 
 5. Create playbook `ha.yml` to do the following on `ha01`:
 
