@@ -57,8 +57,9 @@ From this point, every playbook and role should be created under `/home/ansible/
 - Install and configure haproxy to start up on boot
 - Configure haproxy to route traffic to `web03` and `web04` ip addresses
 
-5. Create playbook `ha-ssl.yml` to do the following on `ha02`:
+6. Create playbook `ha-ssl.yml` to do the following on `ha02`:
 
+- Generate a TLS pem fie using the wildcard domain `*.example.com`
 - Install and configure haproxy to start up on boot
 - Configure haproxy to route traffic to `web01` and `web02` ip addresses
-- Configure SSL termination with haproxy.
+- Configure SSL termination with haproxy using the pem file you created.
